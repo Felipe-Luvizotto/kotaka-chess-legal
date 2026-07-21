@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<title>Kotaka Chess Shorts — Autorização TikTok</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --paper: #f6f3ec; --ink: #211d17; --ink-soft: #5b5346;
+    --accent: #7c5e2a; --accent-soft: #efe6d3; --rule: rgba(33,29,23,0.13);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --paper:#16140f; --ink:#ece6d8; --ink-soft:#a89e8c; --accent:#d1a94b; --accent-soft:rgba(209,169,75,0.12); --rule:rgba(236,230,216,0.14); }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; min-height: 100vh; display: grid; place-items: center;
+    background: var(--paper); color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Roboto, sans-serif;
+    padding: 1.5rem;
+  }
+  .card {
+    max-width: 34rem; width: 100%; border: 1px solid var(--rule);
+    border-radius: 8px; padding: 2rem;
+  }
+  h1 { font-size: 1.3rem; margin: 0 0 0.6rem; }
+  p { color: var(--ink-soft); line-height: 1.6; margin: 0 0 1rem; }
+  .code-box {
+    font-family: "SF Mono", Consolas, monospace; font-size: 0.95rem;
+    background: var(--accent-soft); border: 1px solid var(--rule);
+    border-radius: 6px; padding: 0.9rem 1rem; word-break: break-all;
+    margin-bottom: 1rem;
+  }
+  button {
+    font-family: inherit; font-size: 0.9rem; font-weight: 600;
+    background: var(--accent); color: var(--paper); border: none;
+    border-radius: 999px; padding: 0.55rem 1.2rem; cursor: pointer;
+  }
+  .muted { font-size: 0.82rem; color: var(--ink-soft); }
+</style>
+</head>
+<body>
+  <div class="card">
+    <h1>Autorização concluída</h1>
+    <p>Copie o código abaixo e cole de volta no terminal do script de autenticação.</p>
+    <div class="code-box" id="code">—</div>
+    <button onclick="copyCode()">Copiar código</button>
+    <p class="muted" id="status"></p>
+  </div>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code") || params.get("auth_code");
+    const err = params.get("error") || params.get("error_description");
+    const codeEl = document.getElementById("code");
+    const statusEl = document.getElementById("status");
+    if (code) {
+      codeEl.textContent = code;
+    } else if (err) {
+      codeEl.textContent = err;
+      statusEl.textContent = "A autorização retornou um erro.";
+    } else {
+      codeEl.textContent = "Nenhum código encontrado na URL.";
+    }
+    function copyCode() {
+      navigator.clipboard.writeText(codeEl.textContent);
+      statusEl.textContent = "Copiado!";
+    }
+  </script>
+</body>
+</html>
