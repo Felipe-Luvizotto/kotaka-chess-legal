@@ -1,0 +1,380 @@
+<title>Kotaka Chess Shorts — Termos &amp; Privacidade</title>
+<style>
+  :root {
+    --paper: #f6f3ec;
+    --paper-raised: #ffffff;
+    --ink: #211d17;
+    --ink-soft: #5b5346;
+    --rule: rgba(33,29,23,0.13);
+    --accent: #7c5e2a;
+    --accent-soft: #efe6d3;
+    --mono: "SF Mono", "Cascadia Code", "JetBrains Mono", Consolas, Menlo, monospace;
+    --serif: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --paper: #16140f;
+      --paper-raised: #1e1b14;
+      --ink: #ece6d8;
+      --ink-soft: #a89e8c;
+      --rule: rgba(236,230,216,0.14);
+      --accent: #d1a94b;
+      --accent-soft: rgba(209,169,75,0.12);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #16140f;
+    --paper-raised: #1e1b14;
+    --ink: #ece6d8;
+    --ink-soft: #a89e8c;
+    --rule: rgba(236,230,216,0.14);
+    --accent: #d1a94b;
+    --accent-soft: rgba(209,169,75,0.12);
+  }
+  :root[data-theme="light"] {
+    --paper: #f6f3ec;
+    --paper-raised: #ffffff;
+    --ink: #211d17;
+    --ink-soft: #5b5346;
+    --rule: rgba(33,29,23,0.13);
+    --accent: #7c5e2a;
+    --accent-soft: #efe6d3;
+  }
+
+  * { box-sizing: border-box; }
+  html { background: var(--paper); }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+
+  a { color: var(--accent); }
+
+  .masthead {
+    position: relative;
+    padding: 3rem 1.5rem 2rem;
+    border-bottom: 1px solid var(--rule);
+    background:
+      linear-gradient(var(--paper), var(--paper)),
+      repeating-conic-gradient(var(--rule) 0% 25%, transparent 0% 50%) 0 0 / 14px 14px;
+    background-blend-mode: normal;
+  }
+  .masthead-inner { max-width: 74rem; margin: 0 auto; }
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 0.55rem;
+  }
+  .eyebrow .glyph {
+    display: inline-grid;
+    place-items: center;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    font-size: 1rem;
+    color: var(--accent);
+  }
+  h1.doctitle {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: clamp(1.9rem, 3.4vw, 2.7rem);
+    margin: 0.6rem 0 0.35rem;
+    text-wrap: balance;
+  }
+  .subline {
+    color: var(--ink-soft);
+    font-size: 0.98rem;
+    max-width: 46rem;
+  }
+  .subline .app-id {
+    font-family: var(--mono);
+    background: var(--accent-soft);
+    padding: 0.05rem 0.4rem;
+    border-radius: 3px;
+    color: var(--ink);
+  }
+
+  nav.switcher {
+    margin-top: 1.6rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  nav.switcher a {
+    text-decoration: none;
+    font-family: var(--sans);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--ink);
+    border: 1px solid var(--rule);
+    background: var(--paper-raised);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+  }
+  nav.switcher a:hover { border-color: var(--accent); color: var(--accent); }
+
+  .layout {
+    max-width: 74rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 15rem minmax(0, 1fr);
+    gap: 3rem;
+    padding: 2.5rem 1.5rem 5rem;
+  }
+  @media (max-width: 860px) {
+    .layout { grid-template-columns: 1fr; }
+    aside.toc { display: none; }
+  }
+
+  aside.toc { position: sticky; top: 1.5rem; align-self: start; }
+  aside.toc .toc-doc { margin-bottom: 2rem; }
+  aside.toc h2 {
+    font-family: var(--mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0 0 0.7rem;
+  }
+  aside.toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 1px solid var(--rule);
+  }
+  aside.toc li { margin: 0; }
+  aside.toc a {
+    display: block;
+    text-decoration: none;
+    color: var(--ink-soft);
+    font-size: 0.86rem;
+    padding: 0.32rem 0 0.32rem 0.8rem;
+    border-left: 2px solid transparent;
+    margin-left: -1px;
+  }
+  aside.toc a:hover { color: var(--ink); border-left-color: var(--accent); }
+
+  main { min-width: 0; max-width: 42rem; }
+
+  section.doc { padding-top: 0.5rem; }
+  section.doc + section.doc { margin-top: 5rem; border-top: 1px solid var(--rule); padding-top: 4rem; }
+
+  .doc-meta {
+    font-family: var(--mono);
+    font-size: 0.78rem;
+    color: var(--ink-soft);
+    margin-bottom: 2.2rem;
+    font-variant-numeric: tabular-nums;
+  }
+
+  article.clause { margin-bottom: 2.1rem; scroll-margin-top: 1.5rem; }
+  article.clause h3 {
+    font-family: var(--serif);
+    font-weight: 500;
+    font-size: 1.18rem;
+    margin: 0 0 0.55rem;
+    display: flex;
+    gap: 0.65rem;
+    align-items: baseline;
+  }
+  article.clause h3 .num {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    color: var(--accent);
+    font-weight: 600;
+  }
+  article.clause p { margin: 0 0 0.7rem; color: var(--ink); }
+  article.clause p:last-child { margin-bottom: 0; }
+  article.clause code {
+    font-family: var(--mono);
+    font-size: 0.88em;
+    background: var(--accent-soft);
+    padding: 0.05rem 0.35rem;
+    border-radius: 3px;
+  }
+
+  footer.page-foot {
+    max-width: 74rem;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 3rem;
+    border-top: 1px solid var(--rule);
+    color: var(--ink-soft);
+    font-size: 0.82rem;
+    font-family: var(--mono);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+</style>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="eyebrow"><span class="glyph">♟</span> Kotaka Chess Shorts</div>
+    <h1 class="doctitle">Termos de Serviço &amp; Política de Privacidade</h1>
+    <p class="subline">Documento legal da integração <span class="app-id">Xadrez Api</span>, ferramenta de automação que publica vídeos curtos de xadrez na conta <strong>@kotaka-chess</strong>.</p>
+    <nav class="switcher">
+      <a href="#terms-of-service">Termos de Serviço</a>
+      <a href="#privacy-policy">Política de Privacidade</a>
+    </nav>
+  </div>
+</header>
+
+<div class="layout">
+  <aside class="toc">
+    <div class="toc-doc">
+      <h2>Termos de Serviço</h2>
+      <ol>
+        <li><a href="#t1">Sobre o Serviço</a></li>
+        <li><a href="#t2">Aceitação dos Termos</a></li>
+        <li><a href="#t3">Uso da API do TikTok</a></li>
+        <li><a href="#t4">Titularidade do Conteúdo</a></li>
+        <li><a href="#t5">Acesso e Credenciais</a></li>
+        <li><a href="#t6">Usos Proibidos</a></li>
+        <li><a href="#t7">Disponibilidade</a></li>
+        <li><a href="#t8">Limitação de Responsabilidade</a></li>
+        <li><a href="#t9">Lei Aplicável</a></li>
+        <li><a href="#t10">Contato</a></li>
+      </ol>
+    </div>
+    <div class="toc-doc">
+      <h2>Privacidade</h2>
+      <ol>
+        <li><a href="#p1">Visão Geral</a></li>
+        <li><a href="#p2">Informações Acessadas</a></li>
+        <li><a href="#p3">Uso de Dados e Tokens</a></li>
+        <li><a href="#p4">Armazenamento e Segurança</a></li>
+        <li><a href="#p5">Compartilhamento</a></li>
+        <li><a href="#p6">Retenção e Exclusão</a></li>
+        <li><a href="#p7">Privacidade de Menores</a></li>
+        <li><a href="#p8">Alterações</a></li>
+        <li><a href="#p9">Contato</a></li>
+      </ol>
+    </div>
+  </aside>
+
+  <main>
+    <section class="doc" id="terms-of-service">
+      <div class="doc-meta">Vigência: 20 de julho de 2026 · pt-BR</div>
+
+      <article class="clause" id="t1">
+        <h3><span class="num">1</span>Sobre o Serviço</h3>
+        <p><strong>Kotaka Chess Shorts</strong> ("o Serviço") é uma ferramenta de automação de uso pessoal, desenvolvida e operada por Felipe Luvizotto de Castro, que gera vídeos curtos de posições e táticas de xadrez — verificadas com <code>python-chess</code> — e os publica nos canais oficiais <strong>Kotaka - Chess</strong> no YouTube e no TikTok (<code>@kotaka-chess</code>).</p>
+        <p>O Serviço não é disponibilizado publicamente a terceiros: não há cadastro de usuários externos, painel público nem distribuição do software.</p>
+      </article>
+
+      <article class="clause" id="t2">
+        <h3><span class="num">2</span>Aceitação dos Termos</h3>
+        <p>Ao integrar o Serviço com a API do TikTok, o operador concorda em cumprir estes Termos, os Termos de Serviço do TikTok for Developers e as Diretrizes da Comunidade do TikTok.</p>
+      </article>
+
+      <article class="clause" id="t3">
+        <h3><span class="num">3</span>Uso da API do TikTok</h3>
+        <p>O Serviço utiliza a <strong>Content Posting API</strong> do TikTok exclusivamente para publicar vídeos na conta <code>@kotaka-chess</code>, de propriedade do próprio operador. Nenhuma outra conta do TikTok é acessada, lida ou modificada pelo Serviço.</p>
+      </article>
+
+      <article class="clause" id="t4">
+        <h3><span class="num">4</span>Titularidade e Originalidade do Conteúdo</h3>
+        <p>Todo o conteúdo publicado — posições, narrações e vídeos — é gerado ou compilado pelo operador a partir de partidas e posições de xadrez de domínio público, sem uso de material de terceiros protegido por direitos autorais.</p>
+      </article>
+
+      <article class="clause" id="t5">
+        <h3><span class="num">5</span>Acesso e Credenciais</h3>
+        <p>As credenciais de autenticação (tokens OAuth) são armazenadas localmente, em ambiente controlado pelo operador, e não são compartilhadas com terceiros.</p>
+      </article>
+
+      <article class="clause" id="t6">
+        <h3><span class="num">6</span>Usos Proibidos</h3>
+        <p>É vedado usar o Serviço para publicar spam, conteúdo enganoso ou qualquer material que viole as políticas do TikTok ou do YouTube.</p>
+      </article>
+
+      <article class="clause" id="t7">
+        <h3><span class="num">7</span>Disponibilidade e Alterações</h3>
+        <p>Por se tratar de ferramenta interna de uso pessoal, o Serviço pode ser alterado, suspenso ou descontinuado a qualquer momento, sem aviso prévio.</p>
+      </article>
+
+      <article class="clause" id="t8">
+        <h3><span class="num">8</span>Limitação de Responsabilidade</h3>
+        <p>O Serviço é fornecido "como está", sem garantias de qualquer tipo. O operador não se responsabiliza por interrupções decorrentes de mudanças nas APIs do TikTok ou do YouTube.</p>
+      </article>
+
+      <article class="clause" id="t9">
+        <h3><span class="num">9</span>Lei Aplicável</h3>
+        <p>Estes Termos são regidos pelas leis da República Federativa do Brasil.</p>
+      </article>
+
+      <article class="clause" id="t10">
+        <h3><span class="num">10</span>Contato</h3>
+        <p>Dúvidas sobre estes Termos: <a href="mailto:felipeluvizottodecastro@gmail.com">felipeluvizottodecastro@gmail.com</a></p>
+      </article>
+    </section>
+
+    <section class="doc" id="privacy-policy">
+      <div class="doc-meta">Vigência: 20 de julho de 2026 · pt-BR</div>
+
+      <article class="clause" id="p1">
+        <h3><span class="num">1</span>Visão Geral</h3>
+        <p>Esta Política descreve como o <strong>Kotaka Chess Shorts</strong> trata informações ao integrar-se com a API do TikTok. O Serviço é uma automação de uso exclusivamente pessoal e não coleta dados de usuários finais do TikTok.</p>
+      </article>
+
+      <article class="clause" id="p2">
+        <h3><span class="num">2</span>Informações Acessadas</h3>
+        <p>Ao autorizar a integração, o Serviço acessa apenas os escopos estritamente necessários para publicar vídeos na conta <code>@kotaka-chess</code> — por exemplo <code>video.publish</code> — concedidos pelo próprio operador, titular da conta.</p>
+      </article>
+
+      <article class="clause" id="p3">
+        <h3><span class="num">3</span>Uso de Dados e Tokens</h3>
+        <p>Os tokens de acesso obtidos via OAuth são usados exclusivamente para autenticar chamadas de publicação de vídeo em nome da conta <code>@kotaka-chess</code>. Nenhum dado de terceiros — outros usuários do TikTok — é coletado, processado ou armazenado.</p>
+      </article>
+
+      <article class="clause" id="p4">
+        <h3><span class="num">4</span>Armazenamento e Segurança</h3>
+        <p>Tokens e credenciais são armazenados localmente em arquivos protegidos (ex.: <code>token_tiktok.json</code>), em ambiente de acesso restrito ao operador, e nunca são versionados em repositórios públicos.</p>
+      </article>
+
+      <article class="clause" id="p5">
+        <h3><span class="num">5</span>Compartilhamento de Dados</h3>
+        <p>Nenhuma informação é vendida, compartilhada ou transferida a terceiros. Não há integração com serviços de publicidade ou análise externos.</p>
+      </article>
+
+      <article class="clause" id="p6">
+        <h3><span class="num">6</span>Retenção e Exclusão</h3>
+        <p>Os tokens permanecem armazenados enquanto a integração estiver ativa. O operador pode revogar o acesso e excluir os tokens a qualquer momento, localmente ou pelas configurações da conta TikTok.</p>
+      </article>
+
+      <article class="clause" id="p7">
+        <h3><span class="num">7</span>Privacidade de Menores</h3>
+        <p>O Serviço não se destina a menores de idade e não coleta dados de usuários finais de nenhuma faixa etária.</p>
+      </article>
+
+      <article class="clause" id="p8">
+        <h3><span class="num">8</span>Alterações a esta Política</h3>
+        <p>Eventuais alterações serão publicadas nesta mesma página, com atualização da data de vigência indicada no topo de cada documento.</p>
+      </article>
+
+      <article class="clause" id="p9">
+        <h3><span class="num">9</span>Contato</h3>
+        <p>Dúvidas sobre privacidade: <a href="mailto:felipeluvizottodecastro@gmail.com">felipeluvizottodecastro@gmail.com</a></p>
+      </article>
+    </section>
+  </main>
+</div>
+
+<footer class="page-foot">
+  <span>Kotaka - Chess · @kotaka-chess</span>
+  <span>felipeluvizottodecastro@gmail.com</span>
+</footer>
